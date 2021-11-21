@@ -1,0 +1,265 @@
+html {
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: white;
+  margin: 0;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  user-select: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  animation: 2s ease-out 2s background;
+  animation-fill-mode: forwards;
+}
+
+header div {
+  background-image: url("../images/home_button.png");
+  height: 15rem;
+  width: 100vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 5px 0px;
+  animation: 2s ease-out fade;
+  animation-fill-mode: forwards;
+}
+
+section {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.page1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#twitch-embed {
+  margin-top: 10px;
+}
+
+.data {
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+}
+
+.page2 {
+  color: white;
+  font-family: "Pepsi", "Sans Serif";
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page2 > .container {
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.page2 > .container > div {
+  padding-top: 20px;
+}
+
+.page2 .title {
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid white;
+}
+.page2 .title.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials,
+.specs,
+.stream,
+.config {
+  width: 45vw;
+}
+
+.download {
+  font-family: "Agency FB Bold", arial;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.download:hover {
+  color: #00b6ea;
+}
+.social-grid {
+  padding-top: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.social-option {
+  font-family: "Agency FB Bold", arial;
+  cursor: pointer;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  transition: transform 500ms ease-out;
+}
+
+.social-option:hover {
+  color: #00b6ea;
+  transform: translateX(20px);
+}
+
+.social-option.r:hover {
+  transform: translateX(-20px);
+}
+
+.social-option.r {
+  text-align: right;
+}
+
+.specs-grid {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px 15px;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: "Agency FB Bold", arial;
+}
+
+.specs-element p {
+  margin: 0;
+}
+
+.specs-element .specs-title {
+  font-size: 36px;
+}
+.specs-element .value {
+  font-family: "Agency FB", arial;
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.config-area {
+  width: 100%;
+  margin-top: 10px;
+  height: 291px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.page2 .image {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+}
+.page2 #second-logo {
+  background-image: url("../images/home_button.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 10px;
+  height: 50px;
+  width: 100%;
+  transition: transform 1s;
+  transform: scale(0);
+}
+.page2 #second-logo.visible {
+  transform: scale(1);
+}
+
+footer {
+  font-family: "Agency FB", arial;
+  background: black;
+  width: 100vw;
+  align-self: flex-end;
+  text-align: center;
+  font-size: 18px;
+}
+
+footer > a {
+  color: #00b6ea;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media screen and (max-device-width: 640px) {
+  .page2 > .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .page2 > .container > div {
+    margin-bottom: 50px;
+    margin-left: 0;
+    width: 80vw;
+  }
+  .social-option {
+    font-size: 4rem;
+  }
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .specs-element .specs-title {
+    font-size: 3rem;
+  }
+  .specs-element .value {
+    font-family: "Agency FB", arial;
+    font-size: 2.3rem;
+    opacity: 0.6;
+  }
+  .config {
+    display: none;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .page2 img {
+    height: 100px;
+  }
+  footer {
+    font-size: 35px;
+  }
+}
