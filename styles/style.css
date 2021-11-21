@@ -78,7 +78,6 @@ section {
 }
 
 .page2 > .container {
-  margin-top: 3%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -86,7 +85,7 @@ section {
 }
 
 .page2 > .container > div {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .page2 .title {
@@ -98,13 +97,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.socials,
-.specs,
-.stream,
-.config {
-  width: 45vw;
 }
 
 .download {
@@ -193,16 +185,16 @@ section {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  width: 100vw;
+  width: 80vw;
 }
 .page2 #second-logo {
   background-image: url("../images/home_button.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin: 10px;
+  margin-top: 10px;
   height: 50px;
-  width: 100%;
+  width: 80vw;
   transition: transform 1s;
   transform: scale(0);
 }
@@ -232,34 +224,36 @@ footer > a {
     align-items: center;
   }
   .page2 > .container > div {
-    margin-bottom: 50px;
+    margin-top: 0;
     margin-left: 0;
     width: 80vw;
   }
   .social-option {
-    font-size: 4rem;
+    font-size: 1.2rem;
   }
   .specs-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
   }
   .specs-element .specs-title {
-    font-size: 3rem;
+    font-size: 1rem;
   }
   .specs-element .value {
     font-family: "Agency FB", arial;
-    font-size: 2.3rem;
+    font-size: 1.3rem;
     opacity: 0.6;
   }
   .config {
     display: none;
   }
   .title {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
   }
   .page2 img {
     height: 100px;
   }
   footer {
-    font-size: 35px;
+    font-size: 20px;
   }
 }
