@@ -31,7 +31,7 @@ header {
 header div {
   background-image: url("../images/home_button.png");
   height: 15rem;
-  width: 100vw;
+  width: 80vw;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,6 +59,7 @@ section {
 
 #twitch-embed {
   margin-top: 10px;
+  height: 300px;
 }
 
 .data {
@@ -244,11 +245,11 @@ footer > a {
 
   }
   .specs-element .specs-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .specs-element .value {
     font-family: "Agency FB", arial;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     opacity: 0.6;
   }
   .config {
@@ -262,5 +263,14 @@ footer > a {
   }
   footer {
     font-size: 20px;
+  }
+  #twitch-embed {
+    height: 30vw;
+  }
+}
+
+@media screen and (max-height: 670px) {
+  .stream, .config{
+    display: none;
   }
 }
